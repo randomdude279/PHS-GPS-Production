@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+
+ 
+  <h1 id = "mainHeader"><i>The PHS GPS</i></h1>
+
+
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Map Poolesville High School</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
+
+
+  
+  <style>
+    #moto{
+      font-size:20px;
+      text-align:center;
+    }
+    body{
+      background: #808080;
+      font-family: 'Roboto Flex', sans-serif;
+      
+    }
+    #mainHeader{
+      background:#FFD700;
+      text-align:center;  
+      overflow: hidden;
+    
+    }
+
+    h1{
+      font-size:60px;
+      
+    }
+
+   h2{
+     font-size: 50px;
+     padding-left:5%;
+   }
+
+    h3{
+      font-size: 30px;
+      padding-left:25%;
+      text-indent:50px;
+    }
+    
+    h4{
+      font-size:30px;
+    }
+
+    footer{
+      text-align:center;
+    }
+
+    p{
+      text-align:center;
+      padding-left:25%;
+      padding-right: 25%;
+    }
+
+    #form{
+      text-align:center; 
+    }
+
+    table{
+      padding-left:25%;
+      padding-right:25%;
+     
+    }
+    
+     th, td {
+      border:1px solid black;
+      background: #80805e;
+
+      color:black;
+    }
+
+    hr{
+      border-color: black;  
+    }
+
+    img{
+      padding-left:36%;
+      padding-right:30%; 
+    }
+
+  </style>
+</head>
+
+<body>
+  <script src="script.js"></script>
+  
+
+
+ 
+
+  <img src = "phs.jpeg" length = 100% height = 25%>
+<br>
+<br>
+   <h4 id = "moto">"Where was this when you were a freshmen?"</h4>
+
+  <hr>
+<br>
+
+
+<!-- form -->
+<div id = "form">
+  <!--h4>Get started:</h4-->
+  <p>Plug in 2 room numbers or locations, press Submit, and choose the best route.</p>
+  <form>
+  <label for="fname">Starting location:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Enter text"><br><br>
+  <label for="lname">Destination:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Enter text"><br><br>
+  <a href ="canvas.html"><input type="submit" value="Submit" onclick="event.preventDefault();obtainRoutings(); return 0;"></a>
+</form> 
+
+  <br><br>
+
+  <!--route selection-->
+  <b id='routeselectormsg' >Choose a start and an end to see available routes.</b>
+  <table id='routeselector' style="width:100%;">
+  <tr><td><b>#</b></td><td>Routing List</td><td># of nodes</td><td>Select</td></tr>
+  </table>
+  <iframe hidden id='mapoutput' style='width:100%; height: 525px'>This broswer does not support iFrames. View navigation in another page.</iframe>
+  
+  
+  <br><br>
+
+  <p>Aside from room numbers such as 33A or 61, there are some other locations that can be inputted as start/stop points. They are as follows:</p>
+
+  <br>
+<table style="width:100%">
+  <tr>
+    <th>Location</th>
+    <th>Code</th>
+  </tr>
+    <tr>
+    <td>Globe/Foyer/Auditorium</td>
+    <td>"Foyer"</td>
+  </tr>
+  <tr>
+    <td>Boys Locker Room</td>
+    <td>"BLR"</td>
+  </tr>
+  <tr>
+    <td>Girls Locker Room</td>
+    <td>"GLR"</td>
+  </tr>
+  <tr>
+    <td>Auditorium</td>
+    <td>"Aud"</td>
+  </tr>
+  <tr>
+    <td>Cafeteria</td>
+    <td>"Cafeteria"</td>
+  </tr>
+   <tr>
+    <td>Gym</td>
+    <td>"Gym"</td>
+  </tr>
+  <tr>
+    <td>Weight Room</td>
+    <td>"Weights"</td>
+  </tr>
+  <tr>
+    <td>Libary/Media Center/IMC</td>
+    <td>"MC"</td>
+  </tr>
+  <tr>
+    <td>Science Building</td>
+    <td>"Sci"</td>
+  </tr>
+  <tr>
+    <td>Senior Bench</td>
+    <td>"SB"</td>
+  </tr>
+  <tr>
+    <td>Portables (all portables)</td>
+    <td>"Portables"</td>
+  </tr>
+    <tr>
+    <td>Main Exit (to bus loop)</td>
+    <td>"Exit"</td>
+  </tr>
+  <tr>
+    <td>Any and all room numbers</td>
+    <td>The same (addon letters should be capital, i.e. "33A")</td>
+  </tr>
+</table>
+  <br><br>
+  <hr>
+  <br>
+  <footer>Made By: Isabela Magnoni ISP '25, Rithvik Kondragunta Global '25, Charles Hu Hummaties '25, Jai Bunai Humanities '25'</footer>
+<br><br>
+</body>
+</div>
+</html>
